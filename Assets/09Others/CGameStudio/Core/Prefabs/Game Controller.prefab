@@ -1,0 +1,501 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5830900333801232479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5830900333801232477}
+  - component: {fileID: 5830900333801232476}
+  - component: {fileID: 66467846}
+  - component: {fileID: 66467847}
+  - component: {fileID: 66467848}
+  - component: {fileID: 66467849}
+  - component: {fileID: 1947870487}
+  m_Layer: 0
+  m_Name: Game Controller
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5830900333801232477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5830900333801232479}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5830900333801232476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5830900333801232479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28da350aa8cf64429a02e6109cf8afe5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputManager: {fileID: 0}
+  cameraController: {fileID: 0}
+  playerController: {fileID: 0}
+  uiController: {fileID: 0}
+  autoPause: 1
+  colorController: {fileID: 1947870487}
+--- !u!114 &66467846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5830900333801232479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4533c5ad105f54b4684a8f6e7a14e88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fingerPos: []
+  sensibilsationInterval: 0.7
+  finishStartPos: {fileID: 0}
+  finishEndPos: {fileID: 0}
+  parquetInterval: 0.5
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 320
+  plotterPrefab: {fileID: 983847427926284420, guid: 5cd5021ec18cc8547ba91e1b2a06f0af, type: 3}
+  jumpArea: {fileID: 5241357790875227415, guid: b672763b5b1b09d48b7593d6702a522c, type: 3}
+  isCanDraw: 1
+  playerStack: {fileID: 0}
+--- !u!114 &66467847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5830900333801232479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0f725221d50fac4fa235b72d76ee002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lensPositif: {fileID: 19837756, guid: b88a52d0de3924c4db6011de30ecccd0, type: 3}
+  lensNegatif: {fileID: 2478924688017941548, guid: 8d5c513c230fa194aa064efcec39bcfc, type: 3}
+  finish: {fileID: 19854642, guid: 4de72d65c2293424cbe6461a89fe2997, type: 3}
+  dead: {fileID: 5530825200241437254, guid: 26435f0f65bd3474bbb6ced73186b8e3, type: 3}
+  sparkle: {fileID: 198073853076981922, guid: 7e8a0869a599e3b4b80673e467868254, type: 3}
+  collect: {fileID: 19865610, guid: a07608802ac497743a7f19f6633fdd70, type: 3}
+  ParquetBroke: {fileID: 2784085134492222315, guid: 3cd676dca31c0b043adeceb7bfe86729, type: 3}
+--- !u!114 &66467848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5830900333801232479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c15ea167682fd4a8fe1d473d998a93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - objectPrefab: {fileID: 9132915880120183930, guid: 882a78fc724d2734facaa708429cc8f9, type: 3}
+    poolSize: 200
+  - objectPrefab: {fileID: 4567828820278445975, guid: 62464913d9fd80d499b613381ee6dbb5, type: 3}
+    poolSize: 20
+--- !u!114 &66467849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5830900333801232479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 146d71f6554d05f40936842c86083a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  levelGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.5803922, b: 0.9372625, a: 1}
+    key1: {r: 1, g: 0.19607842, b: 0.9998804, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  FinishGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.22327036, b: 0.22327036, a: 1}
+    key1: {r: 0.97276217, g: 1, b: 0.34591186, a: 1}
+    key2: {r: 0.31388178, g: 1, b: 0.30817604, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 32960
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+--- !u!114 &1947870487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5830900333801232479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8722a24c699c54c3c966903062540c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colors:
+  - platform: {fileID: 2100000, guid: cc095d0f01b1f7042bed0cfd483ec065, type: 2}
+    stackColor: {r: 0.53219545, g: 0.8867924, b: 0.36391956, a: 0}
+    stackFusingColor: {r: 0.6203817, g: 0.9245283, b: 0.56256676, a: 0}
+    autoStackColor: 1
+    collectible: {fileID: 2100000, guid: 42605f9275621b84bbbfd46414977363, type: 2}
+    roadDrawColor:
+      serializedVersion: 2
+      key0: {r: 0.69411767, g: 1, b: 0.6666667, a: 1}
+      key1: {r: 0.69367784, g: 0.8207547, b: 0.41424885, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+  - platform: {fileID: 2100000, guid: bc6374677f15c4f75a26844c9ea485c4, type: 2}
+    stackColor: {r: 0.8962264, g: 0.6205547, b: 0.35088107, a: 0}
+    stackFusingColor: {r: 0.9622642, g: 0.80161005, b: 0.45843717, a: 0}
+    autoStackColor: 1
+    collectible: {fileID: 2100000, guid: cee8c3e77f8724cb29e440a4ac896cb6, type: 2}
+    roadDrawColor:
+      serializedVersion: 2
+      key0: {r: 1, g: 0.007843138, b: 0.21568628, a: 1}
+      key1: {r: 1, g: 0.007843137, b: 0.77698195, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+  - platform: {fileID: 2100000, guid: c25a6ce4b2ca544f39cac1507f832fa0, type: 2}
+    stackColor: {r: 0, g: 0, b: 0, a: 0}
+    stackFusingColor: {r: 0, g: 0, b: 0, a: 0}
+    autoStackColor: 1
+    collectible: {fileID: 2100000, guid: 95b065e92d4e149a2a7347b86832f0ec, type: 2}
+    roadDrawColor:
+      serializedVersion: 2
+      key0: {r: 0.8784314, g: 0.54901963, b: 0.31764707, a: 1}
+      key1: {r: 0.8207547, g: 0.20518868, b: 0.3789741, a: 1}
+      key2: {r: 0.8207547, g: 0.20518868, b: 0.3789741, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 65535
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+  - platform: {fileID: 2100000, guid: cd100570408b947c0961fda40742bacb, type: 2}
+    stackColor: {r: 0, g: 0, b: 0, a: 0}
+    stackFusingColor: {r: 0, g: 0, b: 0, a: 0}
+    autoStackColor: 1
+    collectible: {fileID: 2100000, guid: 0cc4431293add454399e3c82f0fbbb86, type: 2}
+    roadDrawColor:
+      serializedVersion: 2
+      key0: {r: 0.8784314, g: 0.31764704, b: 0.48026618, a: 1}
+      key1: {r: 0.7264151, g: 0.39926952, b: 0.30495727, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+  - platform: {fileID: 2100000, guid: 5c1d8cd2c6223487cbc7a29c1306cb74, type: 2}
+    stackColor: {r: 0, g: 0, b: 0, a: 0}
+    stackFusingColor: {r: 0, g: 0, b: 0, a: 0}
+    autoStackColor: 1
+    collectible: {fileID: 2100000, guid: a2617319516c84fcca7be33d503caaa1, type: 2}
+    roadDrawColor:
+      serializedVersion: 2
+      key0: {r: 1, g: 0.3254902, b: 0.8980392, a: 1}
+      key1: {r: 1, g: 0.32549024, b: 0.58339995, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+  - platform: {fileID: 2100000, guid: bb04d3e0bb5ad45e3a2f5832138e63bd, type: 2}
+    stackColor: {r: 0, g: 0, b: 0, a: 0}
+    stackFusingColor: {r: 0, g: 0, b: 0, a: 0}
+    autoStackColor: 1
+    collectible: {fileID: 2100000, guid: 579254c96babcc84e8c5170662cd5f34, type: 2}
+    roadDrawColor:
+      serializedVersion: 2
+      key0: {r: 1, g: 0.3254902, b: 0.8980392, a: 1}
+      key1: {r: 1, g: 0.32549024, b: 0.58339995, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+  - platform: {fileID: 2100000, guid: f36de8cfd979144c88b0cd8579fa537d, type: 2}
+    stackColor: {r: 0, g: 0, b: 0, a: 0}
+    stackFusingColor: {r: 0, g: 0, b: 0, a: 0}
+    autoStackColor: 1
+    collectible: {fileID: 2100000, guid: ee76918fb4fdf47f490dad293de9603f, type: 2}
+    roadDrawColor:
+      serializedVersion: 2
+      key0: {r: 1, g: 0.3254902, b: 0.8980392, a: 1}
+      key1: {r: 1, g: 0.32549024, b: 0.58339995, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+  currentColor:
+    platform: {fileID: 0}
+    stackColor: {r: 0, g: 0, b: 0, a: 0}
+    stackFusingColor: {r: 0, g: 0, b: 0, a: 0}
+    autoStackColor: 0
+    collectible: {fileID: 0}
+    roadDrawColor:
+      serializedVersion: 2
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
